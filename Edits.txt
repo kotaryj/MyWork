@@ -1,0 +1,71 @@
+EDITS:
+
+YOU CAN CREATE EDITS BY FOLLOWING A PROCESS:
+
+EDITS are set of one or more rules.
+Each rule should be run in an order.
+The order should be from fastest to slowest.
+
+
+Caldwell, Daniel 21 minutes 41 seconds
+Like so, like under the process steps anytimes it it gives you a a number like that in and print the in parentheses.
+Caldwell, Daniel 21 minutes 54 seconds
+The 403D3 and talks about the the the field submitted.
+Caldwell, Daniel 22 minutes
+That's the field on the incoming claim, and there's a set of functions that address those you know.
+Caldwell, Daniel 22 minutes 12 seconds
+Data out of the well, what was entered on the claim.
+Caldwell, Daniel 22 minutes 17 seconds
+So this added is checking the bill number.
+Caldwell, Daniel 22 minutes 24 seconds
+That they submitted like this is the first film or the OR the 2nd or the 3rd, making sure that it.
+Caldwell, Daniel 22 minutes 34 seconds
+There's also a field called uh number of fields authorized.
+Caldwell, Daniel 22 minutes 39 seconds
+How many refills this certain drug can get or the prescription allows for and adds the number of fills authorized field?
+Caldwell, Daniel 22 minutes 49 seconds
+So it's just comparing 2 fields on the incoming claim and there are function I think we had to actually create one of those because we weren't.
+
+
+
+Though once you run an A an edit into HRX set of tables, you have to restart for the for your system to pick it up.They're they're they're loaded at startup all the, umm, all the edits are.So you have to reset the process watcher, that little stoplight thing.
+
+after development, unit test by taking screen shots and attach to user story before checking it in Github.
+
+
+
+Based on it being in that TX NDC drug program table with the drug program as COV, and then also the the person's plan ID, which there's a global variable that that we can use for that.
+
+Use for that.
+
+So you're you're comparing.
+
+
+You're you're function identifies that the drug be in DC that you're using is in this table.
+
+For that person's plan ID and this that COV is is in the drug program column, then the edits gonna continue if if that is false, it's gonna just get out.
+
+Out it won't.
+
+It won't post the edit if it's not a COV drug, then the next thing that it's looking at is there's already a paid.
+
+where is this table??tx_ndcdrugprogram
+
+Your function would be would be to select and really you don't care what the data is, you just want to know if that row exists in the table.
+
+So you could do a select count from XI NDC drug program where the NDC key is what comes in on the you know on the claim and the members plan ID is in here and the drug program is COV and the data service is between these two.
+
+These two dates effective in term date.
+
+And that would that would identify that, yes, you've got this kind of a, you've got a qualifying drug, so then the.
+
+
+
+Caldwell, Daniel 1 hour 15 minutes 19 seconds
+The compute is used for the rules, so all the R functions are the actual rules that will get moved into the RE rule table or get entered into a a row in the RE rules. Umm.
+Caldwell, Daniel 1 hour 15 minutes 41 seconds
+The four is a Boolean value type, so all these rules the PR's will compute into a Boolean value, so it'll just see they're gonna be true or false.
+Caldwell, Daniel 1 hour 16 minutes 1 second
+If it's true, the edit keeps processing and goes to the next.
+Caldwell, Daniel 1 hour 16 minutes 8 seconds
+The next logical step, if it's false and it's A and it's not like in an or situation in the in the the logic then it'll it'll get out of the edit and and go to the next edit, it won't post, it won't post the edit if any part of it translates to false.
